@@ -1,0 +1,49 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: #506aee;
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.main-blob img {
+  position: absolute;
+  top: 12%;
+  right: 1;
+  width: 35%;
+  height: 55%;
+}
+.city img {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  height: 40%;
+  width: 70%;
+}
+.side-b img {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.bottom-b img {
+  position: absolute;
+  right: 20%;
+  bottom: 10%;
+  width: 9%;
+}
+.login-part img {
+  height: 90vh;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  left: 5%;
+  top: 5%;
+}
