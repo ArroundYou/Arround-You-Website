@@ -5,45 +5,59 @@
   padding: 0;
   margin: 0;
 }
-
 body {
   background-color: #506aee;
+  display: flex;
   position: relative;
-  height: 100vh;
-  overflow: hidden;
 }
 
-.main-blob img {
-  position: absolute;
-  top: 12%;
-  right: 1;
-  width: 35%;
-  height: 55%;
+.rectangle {
+  margin-left: 4.2rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  height: 95vh;
+  width: 25rem;
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 25px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
 }
-.city img {
+.creds {
   position: absolute;
-  bottom: 0;
-  right: 0;
-  height: 40%;
-  width: 70%;
+  top: 11rem;
+  left: 12rem;
 }
-.side-b img {
+.icon {
   position: absolute;
-  top: 0;
-  right: 0;
+  top: 3rem;
+  left: 16.8rem;
+  color: #fff;
+  font-size: 3rem;
 }
-.bottom-b img {
-  position: absolute;
-  right: 20%;
-  bottom: 10%;
-  width: 9%;
+.register {
+  margin-top: 1rem;
+  margin-left: 3.7rem;
+  background-color: #ffba08;
+  color: white;
 }
-.login-part img {
-  height: 90vh;
-  position: absolute;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  left: 5%;
-  top: 5%;
+.register:hover {
+  transform: scale(0.9);
+  transition: transform 0.8s ease-in-out;
+}
+.links {
+  margin-top: -15px;
+  margin-left: 1.2rem;
+}
+.or {
+  margin-left: 5.5rem;
+  margin-top: 0.3rem;
+  font-size: 1rem;
+  font-weight: 2rem;
+}
+.heading {
+  font-size: 1rem;
+  color: #fff;
+  margin-left: 10px;
 }
