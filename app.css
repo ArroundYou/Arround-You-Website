@@ -10,7 +10,7 @@ body {
   display: flex;
   position: relative;
   height: 100vh;
-  width: 100;
+  width: 100%;
   overflow: hidden;
 }
 
@@ -90,10 +90,10 @@ body {
   height: 15vh;
   margin-top: 3rem;
 }
-.city {
+.city img {
   position: absolute;
   bottom: 0;
   right: 0;
-  height: 10vh;
-  width: 5rem;
+  height: 50vh;
+  width: 80%;
 }
