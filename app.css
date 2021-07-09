@@ -8,18 +8,23 @@
 body {
   background-color: #506aee;
   display: flex;
-  position: relative;
   height: 100vh;
   width: 100%;
+  align-items: center;
+
   overflow: hidden;
 }
 
 .rectangle {
   margin-left: 4.2rem;
   margin-top: 1rem;
+  align-items: center;
   margin-bottom: 1rem;
-  height: 95vh;
+  height:70vh;
   width: 25rem;
+  justify-content: center;
+  display: flex;
+
   background: rgba(255, 255, 255, 0.25);
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
   backdrop-filter: blur(4px);
@@ -31,20 +36,21 @@ body {
 .creds {
   position: absolute;
   top: 11rem;
-  left: 12rem;
+  flex-direction: column;
+  align-items: center;
+  display: flex;
 }
 
 .icon {
   position: absolute;
   top: 3rem;
-  left: 16.8rem;
   color: #fff;
   font-size: 3rem;
 }
 
 .register {
   margin-top: 1rem;
-  margin-left: 3.7rem;
+  position: relative;
   background-color: #ffba08;
   color: white;
 }
@@ -73,7 +79,7 @@ body {
 }
 
 /* rIGHT SIDE */
-
+/*
 .main-blob img {
   height: 70%;
   width: 60%;
@@ -96,4 +102,4 @@ body {
   right: 0;
   height: 50vh;
   width: 80%;
-}
+} */
