@@ -1,14 +1,17 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
-
 * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
 }
+
 body {
   background-color: #506aee;
   display: flex;
   position: relative;
+  height: 100vh;
+  width: 100;
+  overflow: hidden;
 }
 
 .rectangle {
@@ -24,11 +27,13 @@ body {
   border-radius: 25px;
   border: 1px solid rgba(255, 255, 255, 0.18);
 }
+
 .creds {
   position: absolute;
   top: 11rem;
   left: 12rem;
 }
+
 .icon {
   position: absolute;
   top: 3rem;
@@ -36,28 +41,59 @@ body {
   color: #fff;
   font-size: 3rem;
 }
+
 .register {
   margin-top: 1rem;
   margin-left: 3.7rem;
   background-color: #ffba08;
   color: white;
 }
+
 .register:hover {
   transform: scale(0.9);
   transition: transform 0.8s ease-in-out;
 }
+
 .links {
   margin-top: -15px;
   margin-left: 1.2rem;
 }
+
 .or {
   margin-left: 5.5rem;
   margin-top: 0.3rem;
   font-size: 1rem;
   font-weight: 2rem;
 }
+
 .heading {
   font-size: 1rem;
   color: #fff;
   margin-left: 10px;
+}
+
+/* rIGHT SIDE */
+
+.main-blob img {
+  height: 70%;
+  width: 60%;
+  margin-left: 7rem;
+  margin-top: 7rem;
+}
+.side-blob img {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.bottom-blob img {
+  margin-left: 18rem;
+  height: 15vh;
+  margin-top: 3rem;
+}
+.city {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  height: 10vh;
+  width: 5rem;
 }
