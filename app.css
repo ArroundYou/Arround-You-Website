@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
 * {
   box-sizing: border-box;
   padding: 0;
@@ -6,100 +7,50 @@
 }
 
 body {
-  background-color: #506aee;
-  display: flex;
   height: 100vh;
   width: 100%;
-  align-items: center;
-
-  overflow: hidden;
+  text-align: center;
 }
-
-.rectangle {
-  margin-left: 4.2rem;
-  margin-top: 1rem;
-  align-items: center;
-  margin-bottom: 1rem;
-  height:70vh;
-  width: 25rem;
-  justify-content: center;
-  display: flex;
-
-  background: rgba(255, 255, 255, 0.25);
-  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
-  border-radius: 25px;
-  border: 1px solid rgba(255, 255, 255, 0.18);
+.firstphase {
+  margin-left: 20px;
 }
-
-.creds {
-  position: absolute;
-  top: 11rem;
-  flex-direction: column;
-  align-items: center;
-  display: flex;
-}
-
 .icon {
-  position: absolute;
-  top: 3rem;
-  color: #fff;
   font-size: 3rem;
+  color: rgb(0, 0, 0);
 }
-
 .register {
-  margin-top: 1rem;
-  position: relative;
   background-color: #ffba08;
-  color: white;
+  color: rgb(0, 0, 0);
+  margin-top: 1.5rem;
 }
-
-.register:hover {
-  transform: scale(0.9);
-  transition: transform 0.8s ease-in-out;
-}
-
 .links {
-  margin-top: -15px;
-  margin-left: 1.2rem;
+  border: 1px solid red;
 }
 
-.or {
-  margin-left: 5.5rem;
-  margin-top: 0.3rem;
-  font-size: 1rem;
-  font-weight: 2rem;
+.sun {
+  height: 100vh;
+  background-color: #f0a500;
 }
 
-.heading {
-  font-size: 1rem;
-  color: #fff;
-  margin-left: 10px;
+.moon {
+  height: 100vh;
+  background-color: #cf7500;
 }
-
-/* rIGHT SIDE */
-/*
-.main-blob img {
-  height: 70%;
-  width: 60%;
-  margin-left: 7rem;
-  margin-top: 7rem;
+.stars {
+  height: 100vh;
+  background-color: #000000;
 }
-.side-blob img {
+.planet {
+  position: relative;
+}
+.slogan {
+  color: rgb(255, 255, 255);
   position: absolute;
-  top: 0;
-  right: 0;
+  top: 50%;
+  right: 15%;
 }
-.bottom-blob img {
-  margin-left: 18rem;
-  height: 15vh;
-  margin-top: 3rem;
+
+@media screen and (max-width: 770px) {
+
+  }
 }
-.city img {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  height: 50vh;
-  width: 80%;
-} */
