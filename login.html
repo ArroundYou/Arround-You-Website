@@ -50,48 +50,60 @@
             >
               <form action="#" class="needs-validation" novalidate>
                 <div class="icon"><i class="fas fa-user-circle"></i></div>
-                <h2 class="heading">Signup for a free account</h2>
+                <h2  class="heading" >Signup for a free account</h2>
 
                 <div id="names" class="d-inline-flex">
                   <div class="mx-auto">
-                    <label class="form-label" for="firstname">Firstname</label>
+                    <label  class="form-label" for="firstname">Firstname</label>
                     <input
                       class="form-control"
                       type="text"
-                      placeholder="firstname"
+                      placeholder="Ex : John"
                       id="firstname"
                       required
                     />
                   </div>
                   <div class="mx-auto">
-                    <label class="form-label" for="lastname">Lastname</label>
+                    <label id="lastname_label" class="form-label" for="lastname">Lastname</label>
                     <input
                       class="form-control"
                       type="text"
-                      placeholder="lastname"
+                      placeholder="Ex: Doe"
                       id="lastname"
                       required
                     />
                   </div>
                 </div>
+
                 <div class="mx-auto">
-                  <label class="form-label" for="email">Email</label>
+                  <label id="phone_label" class="form-label" for="phone">Mobile Number</label>
+                  <input
+                    class="form-control"
+                    type="number"
+                    placeholder="+91 **********"
+                    id="phone"
+                    required
+                  />
+                </div>
+
+                <div class="mx-auto">
+                  <label id="email_label" class="form-label" for="email">Email</label>
                   <input
                     class="form-control"
                     type="email"
-                    placeholder="email"
+                    placeholder="johndoe@gmail.com"
                     id="email"
                     required
                   />
                 </div>
                 <div class="mx-auto">
-                  <label class="form-label" for="createpasssword"
+                  <label id="password_label" class="form-label" for="createpasssword"
                     >Create Passsword</label
                   >
                   <input
                     class="form-control"
                     type="password"
-                    placeholder="create password"
+                    placeholder="More than 6 chars long with one or more number"
                     id="createpassword"
                     required
                   />
@@ -99,7 +111,7 @@
                 <button class="register btn btn-warning mt-3 ml-4">
                   Register
                 </button>
-                <div class="or mt-2">OR</div>
+                <div class="or mt-3">OR</div>
                 <button class="btn links">
                   <span
                     class="iconify"

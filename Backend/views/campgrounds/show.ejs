@@ -1,0 +1,114 @@
+<%layout('layouts/boilerplate')%>
+
+<div class="row mb-3">
+  <div class="col-md-6">
+    <div class="card">
+      <img src="<%=campground.image%>" class="card-img-top" alt="..." />
+      <div class="card-body">
+        <h5 class="card-title"><%=campground.title%></h5>
+        <p class="card-text"><%=campground.description%></p>
+      </div>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item text-muted"><%=campground.location%></li>
+        <li class="list-group-item">$<%=campground.price%>/night</li>
+      </ul>
+      <div class="card-body">
+        <a
+          href="/campgrounds/<%=campground._id%>/edit"
+          class="card-link btn btn-info"
+          >Edit</a
+        >
+
+        <form
+          class="d-inline"
+          action="/campgrounds/<%=campground._id%>?_method=DELETE"
+          method="POST"
+        >
+          <button class="btn btn-danger">Delete</button>
+        </form>
+      </div>
+
+      <div class="card-footer text-muted">
+        <small>2 days ago</small>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-6">
+    <h1>Leave a comment</h1>
+    <div>
+      <form
+        class="needs-validation"
+        action="/campgrounds/<%=campground._id%>/reviews"
+        method="POST"
+        class="mb-3"
+        novalidate
+      >
+        <div class="mb-3">
+          <label for="customRange3" class="form-label">Ratng:</label>
+          <input
+            type="range"
+            class="form-range"
+            min="1"
+            max="5"
+            step="1"
+            id="customRange3"
+            name="review[rating]"
+          />
+        </div>
+        <div class="mb-3">
+          <label class="form-label" for="comment">Review:</label>
+          <textarea
+            class="form-control"
+            name="review[body]"
+            id="comment"
+            cols="70"
+            rows="3"
+            required
+          ></textarea>
+          <div class="valid-feedback">Looks good!</div>
+        </div>
+        <button class="btn btn-success mb-3">Submit</button>
+      </form>
+      <% for(let review of campground.reviews) {%>
+      <div class="card mb-3">
+        <div class="card-body">
+          <h5 class="card-title">Rating:<%=review.rating%></h5>
+          <p class="card-text">Review:<%=review.body%></p>
+          <form
+            action="/campgrounds/<%=campground._id%>/reviews/<%=review._id%>?_method=DELETE"
+            method="POST"
+          >
+            <button class="btn btn-sm btn-danger">Delete</button>
+          </form>
+        </div>
+      </div>
+      <% } %>
+    </div>
+  </div>
+</div>
+
+<script>
+  (function () {
+    "use strict";
+
+    // Fetch all the forms we want to apply custom Bootstrap validation styles to
+    const forms = document.querySelectorAll(".needs-validation");
+
+    // Loop over them and prevent submission
+    Array.prototype.slice.call(forms).forEach(function (form) {
+      form.addEventListener(
+        "submit",
+        function (event) {
+          if (!form.checkValidity()) {
+            event.preventDefault();
+            event.stopPropagation();
+          }
+
+          form.classList.add("was-validated");
+        },
+        false
+      );
+    });
+  })();
+</script>

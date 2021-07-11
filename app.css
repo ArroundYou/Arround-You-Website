@@ -26,8 +26,10 @@ body {
   margin-left: 44%;
 }
 .heading {
-  margin-left: 23px;
   margin-top: 7px;
+  justify-content: center;
+  display: flex;
+
 }
 form {
   position: absolute;
@@ -38,17 +40,23 @@ form {
 }
 .register {
   color: white;
+  margin-top: 10px;
   margin-left: 30%;
   width: 40%;
 }
 .or {
   margin-left: 47%;
-  font-weight: 300;
+  font-weight: 600;
   font-size: 15px;
 }
 .links {
   background-color: rgb(202, 200, 197);
-  margin-left: 26%;
+  margin-left: 22.7%;
+  width: 15rem;
+  font-size: 0.8em;
+  text-align: center;
+  font-weight: 600;
+  margin-top: 10px;
 }
 .overlay {
   position: absolute;
@@ -75,6 +83,37 @@ form {
     margin-left: 21%;
     margin-top: 3%;
   }
+}
+
+#firstname{
+  width: 90%;
+}
+
+#lastname_label{
+  margin-left: 5%;
+}
+
+#lastname{
+  margin-left: 5%;
+  width: 95%;
+}
+
+#names{
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-between;
+}
+
+#email_label{
+  margin-top: 20px;
+}
+
+#phone_label{
+  margin-top: 20px;
+}
+
+#password_label{
+  margin-top: 20px;
 }
 
 /* javascript $ responsive if the video doesnot load
