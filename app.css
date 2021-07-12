@@ -7,14 +7,15 @@
 body {
   height: 100vh;
   width: 100%;
-  /* overflow: hidden; */
+  overflow: hidden;
 }
 
 .bgvideo video {
   min-height: 100%;
   min-width: 100%;
-  object-fit: cover;
   z-index: -1;
+  object-fit: cover;
+  position: absolute;
 }
 #media_div img {
   height: 100vh;
@@ -34,7 +35,7 @@ body {
 form {
   position: absolute;
   top: 15%;
-  z-index: 999;
+  z-index: 9;
   transform: translateX(-35% -25%);
   color: #fff;
 }
@@ -69,7 +70,7 @@ form {
     repeat scroll transparent\9;
   color: white;
   overflow: hidden;
-  z-index: -1;
+  z-index: 0;
 }
 
 @media (max-width: 1236px) {
