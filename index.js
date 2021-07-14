@@ -1,4 +1,18 @@
+window.onload = function() {
+  var firebaseConfig = {
+      apiKey: "AIzaSyDciI0VF3KJ6hSy6CDVIZ4TemwsE5gWKOc",
+      authDomain: "tstr-c9aa8.firebaseapp.com",
+      databaseURL: "https://tstr-c9aa8-default-rtdb.firebaseio.com",
+      projectId: "tstr-c9aa8",
+      storageBucket: "tstr-c9aa8.appspot.com",
+      messagingSenderId: "620871703795",
 
+      appId: "1:620871703795:web:490f9b4ccd83c367b5ab86",
+      measurementId: "G-63SM8SK8T4"
+  };
+
+  firebase.initializeApp(firebaseConfig);
+}
 
 const video = document.getElementById('theVideo');
 video.play();
@@ -14,7 +28,6 @@ $(window).resize(function() {
   video.load();
   video.play();
 });
-
 
 
 
@@ -34,7 +47,6 @@ const edtEmail = document.getElementById('email');
 
 const edtPassword = document.getElementById('createpassword');
 
-var cl = new cloudinary.Cloudinary({cloud_name: "arround-you", secure: true});
 
 
 //// Validation of lengths and characters ////
@@ -72,12 +84,28 @@ function validateInfo(){
     let ph = edtPhone.value;
     let em  = edtEmail.value;
     let ps = edtPassword.value;
-
-    uploadDataToDataBase(fn,ln,ph,em,ps);
+    //
+    // uploadDataToDataBase(fn,ln,ph,em,ps);
+    console.log(httpGet());
   }
 }
+function httpGet()
+{
 
+  const xmlHttp = new XMLHttpRequest();
+  const theUrl = "https://www.smsgatewayhub.com/api/mt/SendSMS?APIKey=ubD43nCqMUOXfeLKYV4oLQ&senderid=EDEZIP&channel=2&DCS=0&flashsms=0&number=919954810227&text=Hello,%20Hope%20You%20are%20doing%20well%20Your%20OTP%20is%20514131%20Ezip%20Info%20Tech%20Pvt%20Ltd&route=1\n";
+   xmlHttp.onreadystatechange = function() {
+       if (xmlHttp.readyState == 4 && xmlHttp.status == 200)
+           callback(xmlHttp.responseText);
+   }
+   xmlHttp.open("POST", theUrl, true); // true for asynchronous
+   xmlHttp.send(null);
+
+
+}
 
 function uploadDataToDataBase(fn,ln,ph,em,ps){
-  console.log(f);
+
+  // $('#exampleModal').modal('show');
+
 }
