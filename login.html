@@ -64,9 +64,10 @@
                       type="text"
                       placeholder="Ex : John"
                       id="firstname"
+                      minlength = "3"
+                      maxlength="13"
                       required
                     />
-                    <div id="valid_feedback_first" class="d-none">  Looks good!  </div>
                   </div>
                   <div class="mx-auto">
                     <label id="lastname_label" class="form-label" for="lastname">Lastname</label>
@@ -75,9 +76,11 @@
                       type="text"
                       placeholder="Ex: Doe"
                       id="lastname"
+                      minlength = "3"
+                      maxlength="13"
                       required
+
                     />
-                    <div class="valid-feedback">  Looks good!  </div>
                   </div>
                 </div>
 
@@ -85,12 +88,14 @@
                   <label id="phone_label" class="form-label" for="phone">Mobile Number</label>
                   <input
                     class="form-control"
-                    type="number"
+                    type="tel"
                     placeholder="+91 **********"
                     id="phone"
+                    title="Phone number should be 10 digits"
+                    minlength="10"
+                    maxlength="10"
                     required
                   />
-                  <div class="valid-feedback">  Looks good!  </div>
                 </div>
 
                 <div class="mx-auto">
@@ -100,9 +105,9 @@
                     type="email"
                     placeholder="johndoe@gmail.com"
                     id="email"
+                    pattern="^([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x22([^\x0d\x22\x5c\x80-\xff]|\x5c[\x00-\x7f])*\x22)(\x2e([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x22([^\x0d\x22\x5c\x80-\xff]|\x5c[\x00-\x7f])*\x22))*\x40([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x5b([^\x0d\x5b-\x5d\x80-\xff]|\x5c[\x00-\x7f])*\x5d)(\x2e([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x5b([^\x0d\x5b-\x5d\x80-\xff]|\x5c[\x00-\x7f])*\x5d))*$"
                     required
                   />
-                  <div class="valid-feedback">  Looks good!  </div>
                 </div>
                 <div class="mx-auto">
                   <label id="password_label" class="form-label" for="createpasssword"
@@ -115,7 +120,6 @@
                     id="createpassword"
                     required
                   />
-                  <div class="valid-feedback">  Looks good!  </div>
                 </div>
                 <button id="registerBtn" class="register btn btn-warning mt-3 ml-4">
                   Register
@@ -186,16 +190,36 @@
       <div class="d-flex justify-content-center align-items-center containery">
       <div class="card py-5 px-3">
 
-
-
           <h5 class="m-0">Mobile phone verification</h5>
           <span class="mobile-text">Enter the code we just send on your mobile phone <b class="text-danger">+91 86684833</b></span>
-          <div class="d-flex flex-row mt-5"><input type="text" class="form-control" autofocus=""><input type="text" class="form-control"><input type="text" class="form-control"><input type="text" class="form-control"></div>
+          <div id="otp" class="d-flex flex-row mt-5">
+            <input class="m-2 text-center form-control form-control-solid rounded focus:border-blue-400 focus:shadow-outline" type="text" id="first" maxlength="1" />
+            <input class="m-2 text-center form-control form-control-solid rounded focus:border-blue-400 focus:shadow-outline" type="text" id="second" maxlength="1" />
+            <input class="m-2 text-center form-control form-control-solid rounded focus:border-blue-400 focus:shadow-outline" type="text" id="third" maxlength="1" />
+            <input class="m-2 text-center form-control form-control-solid rounded focus:border-blue-400 focus:shadow-outline" type="text" id="fourth" maxlength="1" />
+            <input class="m-2 text-center form-control form-control-solid rounded focus:border-blue-400 focus:shadow-outline" type="text" id="fifth" maxlength="1" />
+            <input class="m-2 text-center form-control form-control-solid rounded focus:border-blue-400 focus:shadow-outline" type="text" id="sixth" maxlength="1" />
+          </div>
+
+            <button id="verify_otpBtn" type="button" class="btn btn-secondary">VERIFY</button>
+
           <div class="text-center mt-5"><span class="d-block mobile-text">Don't receive the code?</span><span class="font-weight-bold text-danger cursor">Resend</span></div>
       </div>
   </div>
     </div>
   </div>
+</div>
+
+<div class="loader">
+  <ul class="hexagon-container">
+    <li class="hexagon hex_1"></li>
+    <li class="hexagon hex_2"></li>
+    <li class="hexagon hex_3"></li>
+    <li class="hexagon hex_4"></li>
+    <li class="hexagon hex_5"></li>
+    <li class="hexagon hex_6"></li>
+    <li class="hexagon hex_7"></li>
+  </ul>
 </div>
 
   </body>
