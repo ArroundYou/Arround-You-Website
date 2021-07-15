@@ -189,7 +189,7 @@ function showOtpModal(ph,fn,ln,em,ps,randomNumber){
 
     if (values == randomNumber) {
       showPleaseWait();
-      uploadUserDataToDatabase(fn,ln,ph,em,ps);
+      uploadDataToDataBase(fn,ln,ph,em,ps);
     }else {
       alert("Incorrect otp");
       console.log('Incorrect otp');
